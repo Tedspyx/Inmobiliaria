@@ -1,0 +1,65 @@
+<div class="contenido">
+    <header>
+        <nav class="nav-bar">
+          <button class="logo" (click)="Inicio()">InAlpes</button>
+          <div class="nav-links">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a class="nav-link" href="#">En venta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">En Alquiler</a>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" (click)="Nuevo()">Crear Cuenta</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" (click)="InicioSesion()">Ingresar</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    
+
+        <main class="main-content">
+        <h3>Crear Cuenta</h3>
+            <form action="">
+                    <input type="text" class="form-contro" [(ngModel)]="persona.nombres" name="nombres" placeholder="Nombres">
+                    <input type="text" class="form-contro" [(ngModel)]="persona.apellidos" name="apellidos" placeholder="Apellidos">
+                    <input type="text" class="form-contro" [(ngModel)]="persona.telefono" name="telefono" placeholder="Telefono">
+                    <input type="text" class="form-contro" [(ngModel)]="persona.correo" name="correo" placeholder="Correo Electronico">
+                    <input type="text" class="form-contro" [(ngModel)]="persona.direccion" name="direccion" placeholder="Direccion">
+                    <select class="form-contro" [(ngModel)]="persona.idTp" name="idTp">
+                        <option value="" disabled selected>Seleccione un tipo </option>
+                        <option value="1">Cliente</option>
+                        <option value="2">Propietario</option>
+                        <option value="3">Inquilino</option>
+                        <option value="4">Comercial</option>
+                    </select>                 
+                    <select class="form-contro" [(ngModel)]="persona.idSucursales" name="idSucursales">
+                        <option value="" disabled selected>Seleccione un tipo</option>
+                        <option *ngFor="let sucursales of idSucursales" [value]="sucursales.idSucursales">{{sucursales.idSucursales}}</option>>
+                    </select>
+                <div class="boton ">
+                <button (click)="Guardar(persona)" class="btn btn-danger">Guardar</button>
+                <button (click)="Cancelar()" class="btn btn-danger">Cancelar</button>
+                </div>
+            </form>
+        </main>
+        <footer class="footer">
+            <h2>InAlpes</h2>
+            <ul class="footer-links">
+              <li class="footer-item">
+                <a class="footer-link" href="#">Ubicación</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-link" href="#">Telefono: 601 74568322</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-link" href="#">Sucursales</a>
+              </li>
+            </ul>      
+          </footer>
+        </div>
+

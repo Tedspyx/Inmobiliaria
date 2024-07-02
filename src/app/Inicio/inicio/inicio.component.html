@@ -1,0 +1,59 @@
+<div class="contenido">
+  <header class="header">    
+    <nav class="nav-bar">
+      <button class="nav-link" (click)="Inicio()">InAlpes</button>
+      <div class="nav-links">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="#">En venta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">En Alquiler</a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="Nuevo()">Crear Cuenta</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="InicioSesion()">Ingresar</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="imgsize">
+    <div id="carouselExample" class="carousel slide">     
+
+      <div class="carousel-inner">        
+        <div class="carousel-item active">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>InAlpes</h1>
+            <p>La mejor inmobiliaria de Colombia.</p>
+          </div>
+          <img src="assets/inicio.webp" class="w-100" alt="aptos">
+        </div> 
+      </div>
+    </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Buscar inmueble">
+      <button class="search-button">Buscar</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <h2>InAlpes</h2>
+      <ul class="footer-links">
+        <li class="footer-item">
+          <a class="footer-link" href="#">Ubicación</a>
+        </li>
+        <li class="footer-item">
+          <a class="footer-link" href="#">Telefono: 601 74568322</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="Sucursales()"style ="color:white">Sucursales</button>
+        </li>
+      </ul>   
+  </footer>
+</div>

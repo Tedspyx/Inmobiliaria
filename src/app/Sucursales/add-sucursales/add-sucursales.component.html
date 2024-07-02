@@ -1,0 +1,40 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>:: Agregar Sucursales ::</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">                   
+                    <label for="idInmobiliaria">Inmobiliaria: </label>
+                    <select class="form-control"[(ngModel)]="sucursales.idInmobiliaria" name="idInmobiliaria">
+                        <option *ngFor="let inmobiliaria of idInmobiliaria" [value]="inmobiliaria.idInmobiliaria">{{inmobiliaria.nombres}}</option>
+                    </select>                   
+                </div>
+                <div class="form-group">
+                    <label for="correo">Ciudad: </label>
+                    <input type="text" class="form-control" [(ngModel)]="sucursales.ciudad" name="ciudad">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Telefono: </label>
+                    <input type="text" class="form-control" [(ngModel)]="sucursales.telefono" name="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Correo: </label>
+                    <input type="text" class="form-control" [(ngModel)]="sucursales.correo" name="correo">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Direccion: </label>
+                    <input type="text" class="form-control" [(ngModel)]="sucursales.direccion" name="direccion">
+                </div>
+                <div class="form-group">
+                        <label for="idPersonas">Persona: </label>
+                        <select class="form-control"[(ngModel)]="sucursales.idPersonas" name="idPersonas">
+                            <option *ngFor="let persona of idPersonas" [value]="persona.id">{{persona.nombres}}</option>
+                        </select>
+                </div>
+                <button (click)="Guardar(sucursales)" class="btn btn-danger">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+
+<header>
+    <nav class="nav-bar">
+      <button class="logo" (click)="Inicio()">InAlpes</button>
+      <div class="nav-links">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <button class="nav-link" (click)="Venta()">Venta</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="Alquiler()">Alquiler</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="AddInmueble()">Registrar Inmueble</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="MiPerfil()">Mi Perfil</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="CerrarSesion()">Cerrar Sesión</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<div *ngIf="inmueble" class="container contenido">
+       
+    <div class="row content">
+      <div class="col-md-8 main-content">
+        <div class="property-info">
+                <h1>{{ inmueble.direccion }}</h1>
+                <div class="foto">
+                <img [src]="inmueble.imagenUrl" class="img-fluid" alt="Imagen del inmueble">
+                </div>
+                <p><strong>Direccion:</strong> {{ inmueble.direccion }}</p>
+                <p><strong>Barrio:</strong> {{ inmueble.barrio }}</p>
+                <p><strong>Ciudad:</strong> {{ inmueble.ciudad }}</p>
+                <p><strong>Descripcion del Sitio:</strong> {{ inmueble.descripcionSitio }}</p>
+                <p><strong>Descripcion de los Alrededores:</strong> {{ inmueble.descripcionAlrededores }} </p>
+        </div>
+        
+        <div class="related-properties">
+            <h2>Inmuebles relacionados</h2>
+            <div class="row">
+              <div class="col-md-3">
+                <img src="assets/3.jpg" class="img-fluid related-img" alt="Relacionado 1">
+                <p>Apartamentos<br>Bogotá, Bosa<br>$140.000.000</p>
+              </div>
+              <div class="col-md-3">
+                <img src="assets/1.jpg" class="img-fluid related-img" alt="Relacionado 2">
+                <p>Oficinas<br>Bogotá, Chapinero<br>$10.990.000</p>
+              </div>
+              <div class="col-md-3">
+                <img src="assets/2.jpg" class="img-fluid related-img" alt="Producto">
+                <p>Product<br>Body text for third product<br>$10.99</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>    
+  <footer class="footer">
+    <h2>InAlpes</h2>
+      <ul class="footer-links">
+        <li class="footer-item">
+          <a class="footer-link" href="#">Ubicación</a>
+        </li>
+        <li class="footer-item">
+          <a class="footer-link" href="#">Telefono: 601 74568322</a>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="Sucursales()"style ="color:white">Sucursales</button>
+        </li>
+      </ul>   
+  </footer>
+ 

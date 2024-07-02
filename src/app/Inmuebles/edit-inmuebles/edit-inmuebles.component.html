@@ -1,0 +1,52 @@
+<div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>:: Editar Inmuebles ::</h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <label for="tipoPersona">Propietario: </label>
+            <select class="form-control" [(ngModel)]="inmuebles.idTp" name="idp">
+                <option value="" disabled selected>Seleccione un tipo</option>
+                <option value="1">Cliente</option>
+                <option value="2">Propietario</option>
+                <option value="3">Inquilino</option>
+                <option value="4">Comercial</option>
+            </select>
+        </div>
+          <div class="form-group">
+            <label for="tipoPersona">Tipo de Inmueble: </label>
+            <select class="form-control" [(ngModel)]="inmuebles.idTipoInmu" name="idtp">
+                <option value="" disabled selected>Seleccione un tipo</option>
+                <option value="1">Casa</option>
+                <option value="2">Apartamento</option>
+                <option value="3">Oficina</option>
+            </select>
+        </div> 
+          <div class="form-group">
+            <label for="direccion">Direccion: </label>
+            <input type="text" class="form-control" [(ngModel)]="inmuebles.direccion" name="direccion">
+          </div>
+          <div class="form-group">
+            <label for="barrio">Barrio: </label>
+            <input type="text" class="form-control" [(ngModel)]="inmuebles.barrio" name="barrio">
+          </div>
+          <div class="form-group">
+            <label for="ciudad">Ciudad: </label>
+            <input type="text" class="form-control" [(ngModel)]="inmuebles.ciudad" name="ciudad">
+          </div>
+          <div class="form-group">
+            <label for="descripcionSitio">Descripcion del sitio: </label>
+            <input type="text" class="form-control" [(ngModel)]="inmuebles.descripcionSitio" name="descripcionSitio">
+          </div>
+          <div class="form-group">
+            <label for="descripcionAlrededores">Descripcion de los alrededores: </label>
+            <input type="text" class="form-control" [(ngModel)]="inmuebles.descripcionAlrededores" name="descripcionAlrededores">
+          </div>
+          <button (click)="Actualizar(inmuebles)" class="btn btn-danger">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

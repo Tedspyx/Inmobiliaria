@@ -1,0 +1,181 @@
+body {
+    background-color: #00c853;
+    font-family: Arial, sans-serif;
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+.nav-bar {
+    background-color: #00c853;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-item {
+    margin-left: 20px;
+}
+.nav-link, .btn {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.nav-link:hover, .btn:hover {
+    color: white;
+}
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Encabezado */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Sección de propiedades */
+  .property-info {
+    margin-bottom: 20px;
+  }
+  
+  .property-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .property-info img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .property-info p {
+    margin-bottom: 5px;
+  }
+  
+  /* Descripción de la propiedad */
+  .property-description {
+    margin-bottom: 20px;
+  }
+  
+  .property-description p {
+    line-height: 1.6;
+  }
+  
+  /* Propiedades relacionadas */
+  .related-properties {
+    margin-bottom: 20px;
+  }
+  
+  .related-properties h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .related-properties .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .related-properties .col-md-3 {
+    flex: 0 0 33.33%;
+    padding: 10px;
+  }
+  
+  .related-properties .col-md-3 img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .related-properties .col-md-3 p {
+    margin-bottom: 0;
+  }
+  
+  /* Estilos específicos para la imagen */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Estilos para el botón de cotización */
+  .cotizar-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background-color: black;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .footer h2 {
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+.foto{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.row{
+    flex-direction: row;
+    justify-content: center;
+}

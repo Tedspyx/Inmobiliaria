@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Inmuebles</h1>
+    
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>PROPIETARIO</th>
+          <th>TIPO DE INMUEBLE</th>
+          <th>DIRECCION</th>
+          <th>BARRIO</th>
+          <th>CIUDAD</th>
+          <th>DESCRIPCION DEL SITIO</th>
+          <th>DESCRIPCION DE ALREDEDORES</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let inmueble of inmueble" class="text-center">
+          <td>{{ inmueble.idInmu }}</td>
+          <td>{{ inmueble.idTp}}</td>
+          <td>{{ inmueble.idTipoInmu}}</td>
+          <td>{{ inmueble.direccion }}</td>
+          <td>{{ inmueble.barrio }}</td>
+          <td>{{ inmueble.ciudad }}</td>
+          <td>{{ inmueble.descripcionSitio }}</td>
+          <td>{{ inmueble.descripcionAlrededores }}</td>
+          <td>
+            <button (click)="Editar(inmueble)" class="btn btn-warning">Editar</button>
+            <button (click)="Delete(inmueble)" class="btn btn-danger">Borrar</button>
+            <a [routerLink]="['/inmueble-detalle', inmueble.idInmu]" class="btn btn-primary">Ver Detalles</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

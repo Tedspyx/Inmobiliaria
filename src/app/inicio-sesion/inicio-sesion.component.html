@@ -1,0 +1,47 @@
+<div class="contenido">
+  <header>
+    <nav class="nav-bar">
+      <button class="logo" (click)="Inicio()">InAlpes</button>
+      <div class="nav-links">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="#">En venta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">En Alquiler</a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="Nuevo()">Crear Cuenta</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h3>Inicio Sesion</h3>
+    <form>
+      <input type="text" class="form-control" [(ngModel)]="correo" name="correo" placeholder="Correo Electronico" required>
+      <div class="boton">
+        <button class="btn btn-danger" type="submit" (click)="SesionIniciar(correo)">Entrar</button>
+        <button class="btn btn-danger" type="button" (click)="Inicio()">Cancelar</button>
+      </div>
+      <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <h2>InAlpes</h2>
+    <ul class="footer-links">
+      <li class="footer-item">
+        <a class="footer-link" href="#">Ubicación</a>
+      </li>
+      <li class="footer-item">
+        <a class="footer-link" href="#">Telefono: 601 74568322</a>
+      </li>
+      <li class="footer-item">
+        <a class="footer-link" href="#">Sucursales</a>
+      </li>
+    </ul>
+  </footer>
+</div>

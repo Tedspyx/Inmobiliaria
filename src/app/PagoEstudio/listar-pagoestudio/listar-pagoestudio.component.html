@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Personas</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ID INMUEBLE</th>
+                        <th>CODIGO TRANSACCION</th>
+                        <th>FECHA PAGO</th>
+                        <th>MONTO PAGO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pagoestudio of pagoestudio" class="text-center">
+                        <td>{{pagoestudio.id}}</td>
+                        <td>{{pagoestudio.idInmueble}}</td>
+                        <td>{{pagoestudio.codigoTransac}}</td>
+                        <td>{{pagoestudio.fechaPago}}</td>
+                        <td>{{pagoestudio.montoPago}}</td>
+                        <td>
+                            <button (click)="Editar(pagoestudio)" class="btn btn-warning">Editar</button>
+                            <button (click)="Delete(pagoestudio)" class="btn btn-danger" style="margin-left: 1px;">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
