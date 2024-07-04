@@ -47,4 +47,26 @@ export class AppComponent {
   Inicio(){
     this.router.navigate(["inicio"])
   }
+
+  Informacion(){
+    this.router.navigate(["listar-info"]);
+  }
+  NuevoInfo(){
+    this.router.navigate(["add-info"]);
+  }
+
+
+  Visita(){
+    this.router.navigate(["listar-visita"]);
+  }
+  NuevaVisita(){
+    this.router.navigate(["add-visita"]);
+  }
+
+  Analisis(){
+    this.router.navigate(["listar-analisis"]);
+  }
+  NuevoAnalisis(){
+    this.router.navigate(["add-analisis"]);
+  }
 }

@@ -48,4 +48,10 @@ SesionIniciar(correo: string): void {
   SesionIniciada(){
     this.router.navigate(["sesion-iniciada"]);
   }
+  Venta(){
+    this.router.navigate(["listar-inmuebles"]);
+  }
+  Alquiler(){
+    this.router.navigate(["listar-inmuebles"]);
+  }
 }

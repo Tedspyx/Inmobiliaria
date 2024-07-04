@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Personas</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>PERSONA</th>
+                        <th>ID PAGO</th>
+                        <th>RESULTADO</th>
+                        <th>OBSERVACIONES</th>
+                        <th>FECHA DEL ANALISIS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let analisis of analisis" class="text-center">
+                        <td>{{analisis.id}}</td>
+                        <td>{{analisis.idPersonas}}</td>
+                        <td>{{analisis.idPagoEstudio}}</td>
+                        <td>{{analisis.resultadoAnalisis}}</td>
+                        <td>{{analisis.observaciones}}</td>
+                        <td>{{analisis.fechaAnalisis}}</td>
+                        <td>
+                            <button (click)="Editar(analisis)" class="btn btn-warning">Editar</button>
+                            <button (click)="Delete(analisis)" class="btn btn-danger" style="margin-left: 1px;">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

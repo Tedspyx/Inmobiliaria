@@ -3,15 +3,15 @@
     
           <!-- Breadcrumb -->
           <header class="header">    
-            <nav class="nav-bar">
+            <nav class="nav-bar nav">
               <button class="nav-link" (click)="Inicio()">InAlpes</button>
-              <div class="nav-links">
+              <div class="nav-links menu">
                 <ul class="nav-menu">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">En venta</a>
+                    <button class="nav-link" (click)="Inmuebles()">Inmuebles</button>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">En Alquiler</a>
+                    <button class="nav-link" (click)="Salir()">Cerrar Sesion</button>
                   </li>
                 </ul>
               </div>
@@ -94,6 +94,7 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <button class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills" (click)="Editar()" >Edit</button>
+                      <button class="btn btn-primary" (click)="GestionarInformacionComercial()">Gestionar Información Comercial</button>
                     </div>
                   </div>
                 </div>
@@ -101,6 +102,48 @@
             </div>
           </div>
         </div> 
+
+<!-- Sección de Mis Inmuebles -->
+<div class="card mb-3">
+  <div class="card-body">
+    <h4 class="card-title">Mis Inmuebles</h4>
+    <div *ngFor="let inmueble of inmuebles; let i = index">
+      <div class="card mt-3">
+        <div class="card-header">
+          <h5 class="card-title">{{ inmueble.idInmu }} - {{ inmueble.idTipoInmu }}</h5>
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th>DIRECCION</th>
+                <td>{{ inmueble.direccion }}</td>
+              </tr>
+              <tr>
+                <th>BARRIO</th>
+                <td>{{ inmueble.barrio }}</td>
+              </tr>
+              <tr>
+                <th>CIUDAD</th>
+                <td>{{ inmueble.ciudad }}</td>
+              </tr>
+              <tr>
+                <th>DESCRIPCION DEL SITIO</th>
+                <td>{{ inmueble.descripcionSitio }}</td>
+              </tr>
+              <tr>
+                <th>DESCRIPCION DE ALREDEDORES</th>
+                <td>{{ inmueble.descripcionAlrededores }}</td>
+              </tr>
+              <button (click)="PagoEstudio(inmueble.idInmu)" class="btn btn-danger" style="margin-left: 1px;">Pago Estudio</button>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         <footer class="footer">
             <h2>InAlpes</h2>
               <ul class="footer-links">

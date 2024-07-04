@@ -1,0 +1,40 @@
+<div class="contenido">
+
+    
+
+    <main class="main-content">
+    <h3>Crear Analisis</h3>
+        <form action="">
+                <select class="form-contro" [(ngModel)]="analisis.idPagoEstudio" name="idPagoEstudio">
+                    <option value="" disabled selected>Seleccione un tipo</option>
+                    <option *ngFor="let pagoestudio of pagoestudio" [value]="pagoestudio.id">{{pagoestudio.id}}</option>>
+                </select>
+                <select class="form-contro" [(ngModel)]="analisis.idPersonas" name="idPersonas">
+                    <option value="" disabled selected>Seleccione un tipo</option>
+                    <option *ngFor="let persona of persona" [value]="persona.id">{{persona.nombres}}</option>>
+                </select>
+                <input type="text" class="form-contro" [(ngModel)]="analisis.resultadoAnalisis" name="apellidos" placeholder="Resultado del Analisis">
+                <input type="text" class="form-contro" [(ngModel)]="analisis.observaciones" name="telefono" placeholder="Observaciones">
+                <input type="text" class="form-contro" [(ngModel)]="analisis.fechaAnalisis" name="correo" placeholder="Fecha del Analisis">
+          
+            <div class="boton ">
+            <button (click)="Actualizar(analisis)" class="btn btn-danger">Guardar</button>
+            </div>
+        </form>
+    </main>
+    <footer class="footer">
+        <h2>InAlpes</h2>
+        <ul class="footer-links">
+          <li class="footer-item">
+            <a class="footer-link" href="#">Ubicación</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Telefono: 601 74568322</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Sucursales</a>
+          </li>
+        </ul>      
+      </footer>
+    </div>
+

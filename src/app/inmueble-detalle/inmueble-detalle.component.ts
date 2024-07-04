@@ -11,6 +11,17 @@ import { InmueblesserviceService } from '../Service/Inmuebles-Service/inmuebles-
 })
 export class InmuebleDetalleComponent implements OnInit {
   inmueble: Inmuebles | null = null;
+  imagePaths: string[] = [
+    'assets/1.jpg',
+    'assets/2.jpg',
+    'assets/3.jpg',
+    'assets/4.jpg',
+    'assets/aptoproyecto.jpg',
+    'assets/aptos.jpg',
+    'assets/aptoventa.jpg',
+    'assets/venta.jpg',
+    // Agrega tantas rutas como imágenes tengas
+  ];
 
   constructor(
     private route: ActivatedRoute,
@@ -41,6 +52,13 @@ export class InmuebleDetalleComponent implements OnInit {
       console.error('ID no proporcionado en la ruta');
     }
   }
+
+  getRandomImagePath(): string {
+    const randomIndex = Math.floor(Math.random() * this.imagePaths.length);
+    return this.imagePaths[randomIndex];
+  }
+
+
   AddInmueble(){
     this.router.navigate(["add-inmuebles"]);
   }

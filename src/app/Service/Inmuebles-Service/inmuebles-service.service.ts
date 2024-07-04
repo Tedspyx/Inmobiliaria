@@ -13,6 +13,7 @@ export class InmueblesserviceService {
   Url = 'http://localhost:8080/inmuebles/submit';
   Urltipo = 'http://localhost:8080/tipo_inmueble/submit';
   UrlPersona = 'http://localhost:8080/personas/submit';
+  UrlInmuPersona = 'http://localhost:8080/inmuebles/persona';
   getInmuebles(){
     return this.http.get<Inmuebles[]>(this.Url);
   }
@@ -38,4 +39,7 @@ export class InmueblesserviceService {
     return this.http.delete<Inmuebles>(this.Url+"/"+inmuebles.idInmu);
   }
 
+  getInmueblesByPersonaId(personaId: number): Observable<Inmuebles[]> {
+    return this.http.get<Inmuebles[]>(`${this.UrlInmuPersona}/${personaId}`); // Corregido
+  }
 }

@@ -1,8 +1,8 @@
-
-<header>
-    <nav class="nav-bar">
-      <button class="logo" (click)="Inicio()">InAlpes</button>
-      <div class="nav-links">
+<div class="contenido">
+<header class="header">
+    <nav class="nav-bar nav">
+      <button class="nav-link" (click)="Inicio()">InAlpes</button>
+      <div class="nav-links menu">
         <ul class="nav-menu">
           <li class="nav-item">
             <button class="nav-link" (click)="Venta()">Venta</button>
@@ -31,7 +31,7 @@
         <div class="property-info">
                 <h1>{{ inmueble.direccion }}</h1>
                 <div class="foto">
-                <img [src]="inmueble.imagenUrl" class="img-fluid" alt="Imagen del inmueble">
+                  <img [src]="getRandomImagePath()" alt="Imagen del Inmueble" class="img-fluid mb-3">
                 </div>
                 <p><strong>Direccion:</strong> {{ inmueble.direccion }}</p>
                 <p><strong>Barrio:</strong> {{ inmueble.barrio }}</p>
@@ -74,4 +74,4 @@
         </li>
       </ul>   
   </footer>
- 
+</div>

@@ -1,10 +1,26 @@
-<div class="container col-md-6">
-    <div class="card">
-        <div class="card-header">
-            <h3>:: Agregar Inmuebles ::</h3>
-        </div>
 
-        <div class="card-body">
+<div class="contenido">
+    <header class="header">
+        <nav class="nav-bar nav">
+          <button class="nav-link" (click)="Inicio()">InAlpes</button>
+          <div class="nav-links menu">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <button class="nav-link" (click)="Inmuebles()">Inmuebles</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" (click)="MiPerfil()">Perfil</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" (click)="CerrarSesion()">Cerrar Sesión</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>   
+
+        <main class="main-content">
+        <h3>Registrar Inmueble</h3>
             <form action="">
                 <div class="form-group">
                     <label for="tipoPersona">Propietario: </label>
@@ -25,29 +41,27 @@
                 </div>  
 
                 <div class="form-group">
-                    <label for="direccion">Direccion: </label>
-                    <input type="text" class="form-control" [(ngModel)]="inmuebles.direccion" name="direccion">
+                    <input type="text" class="form-control" [(ngModel)]="inmuebles.direccion" name="direccion" placeholder="Direccion">
                 </div>
 
                 <div class="form-group">
-                    <label for="barrio">Barrio: </label>
-                    <input type="text" class="form-control" [(ngModel)]="inmuebles.barrio" name="barrio">
+                    <input type="text" class="form-control" [(ngModel)]="inmuebles.barrio" name="barrio" placeholder="Barrio">
                 </div>
 
                 <div class="form-group">
-                    <label for="ciudad">Ciudad: </label>
-                    <input type="text" class="form-control" [(ngModel)]="inmuebles.ciudad" name="ciudad">
+                    <input type="text" class="form-control" [(ngModel)]="inmuebles.ciudad" name="ciudad" placeholder="Ciudad">
                 </div>
 
                 <div class="form-group">
-                    <label for="descripcionSitio">Descripcion del sitio: </label>
-                    <input type="text" class="form-control" [(ngModel)]="inmuebles.descripcionSitio" name="descripcionSitio">
+                    <input type="text" class="form-control" [(ngModel)]="inmuebles.descripcionSitio" name="descripcionSitio" placeholder="Descripcion del Sitio">
                 </div>
                 
                 <div class="form-group">
-                        <label for="descripcionAlrededores">Descripcion de los alrededores: </label>
-                        <input type="text" class="form-control" [(ngModel)]="inmuebles.descripcionAlrededores" name="descripcionAlrededores">
+                        <input type="text" class="form-control" [(ngModel)]="inmuebles.descripcionAlrededores" name="descripcionAlrededores" placeholder="Descripcion de los alrededores">
                 </div> 
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="inmuebles.valor" name="valor" placeholder="Valor del inmueble">
+          </div> 
                 <div class="form-group">
                     <label for="imagenUrl">Imagen: </label>
                     <input type="file" class="form-control" (change)="onFileSelected($event)">
@@ -56,10 +70,24 @@
                   <div *ngIf="selectedImage" class="form-group">
                     <img [src]="selectedImage" class="img-fluid" alt="Vista previa de la imagen">
                   </div>
-
-                
+                  <div class="boton">
                 <button (click)="Guardar(inmuebles)" class="btn btn-danger">Guardar</button>
+                <button (click)="Cancelar()" class="btn btn-danger">Cancelar</button>
+                  </div>
             </form>
-        </div>
-    </div>
+    </main>
+<footer class="footer">
+    <h2>InAlpes</h2>
+    <ul class="footer-links">
+      <li class="footer-item">
+        <a class="footer-link" href="#">Ubicación</a>
+      </li>
+      <li class="footer-item">
+        <a class="footer-link" href="#">Telefono: 601 74568322</a>
+      </li>
+      <li class="footer-item">
+        <a class="footer-link" href="#">Sucursales</a>
+      </li>
+    </ul>      
+  </footer>
 </div>

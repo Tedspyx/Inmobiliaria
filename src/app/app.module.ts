@@ -25,6 +25,18 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { SesionIniciadaComponent } from './sesion-iniciada/sesion-iniciada.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { InmuebleDetalleComponent } from './inmueble-detalle/inmueble-detalle.component';
+import { AddInformacioncomercialComponent } from './InformacionComercial/add-informacioncomercial/add-informacioncomercial.component';
+import { EditInformacioncomercialComponent } from './InformacionComercial/edit-informacioncomercial/edit-informacioncomercial.component';
+import { ListarInformacioncomercialComponent } from './InformacionComercial/listar-informacioncomercial/listar-informacioncomercial.component';
+import { AddVisitaComponent } from './Visita/add-visita/add-visita.component';
+import { EditVisitaComponent } from './Visita/edit-visita/edit-visita.component';
+import { ListarVisitaComponent } from './Visita/listar-visita/listar-visita.component';
+import { AddAnalisisriesgoComponent } from './AnalisisRiesgo/add-analisisriesgo/add-analisisriesgo.component';
+import { EditAnalisisriesgoComponent } from './AnalisisRiesgo/edit-analisisriesgo/edit-analisisriesgo.component';
+import { ListarAnalisisriesgoComponent } from './AnalisisRiesgo/listar-analisisriesgo/listar-analisisriesgo.component';
+import { AddCompraComponent } from './Compra/add-compra/add-compra.component';
+import { EditCompraComponent } from './Compra/edit-compra/edit-compra.component';
+import { ListarCompraComponent } from './Compra/listar-compra/listar-compra.component';
 
 
 
@@ -47,7 +59,19 @@ import { InmuebleDetalleComponent } from './inmueble-detalle/inmueble-detalle.co
     InicioSesionComponent,
     SesionIniciadaComponent,
     PerfilComponent,
-    InmuebleDetalleComponent
+    InmuebleDetalleComponent,
+    AddInformacioncomercialComponent,
+    EditInformacioncomercialComponent,
+    ListarInformacioncomercialComponent,
+    AddVisitaComponent,
+    EditVisitaComponent,
+    ListarVisitaComponent,
+    AddAnalisisriesgoComponent,
+    EditAnalisisriesgoComponent,
+    ListarAnalisisriesgoComponent,
+    AddCompraComponent,
+    EditCompraComponent,
+    ListarCompraComponent
   ],
   imports: [
     BrowserModule,

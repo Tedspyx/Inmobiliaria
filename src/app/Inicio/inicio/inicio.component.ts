@@ -22,4 +22,7 @@ export class InicioComponent {
   Inicio(){
     this.router.navigate(["inicio"]);
   }
+  Inmuebles(){
+    this.router.navigate(["listar-inmuebles"]);
+  }
 }

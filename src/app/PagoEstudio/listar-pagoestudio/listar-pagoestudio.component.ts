@@ -13,29 +13,30 @@ export class ListarPagoestudioComponent implements OnInit{
   pagoestudio:PagoEstudio[]=[];
   constructor(private service:PagoestudioserviceService, private router:Router){
   }
-    ngOnInit(){
-      this.service.getPagoEstudio()
-      .subscribe(data=>{
-        this.pagoestudio=data;
-      }),
-      this.service.getInmuebles()
-      .subscribe(data=>{
-        this.inmuebles=data;
-      })
-        }     
+
+ngOnInit(){
+  this.service.getPagoEstudio()
+  .subscribe(data=>{
+  this.pagoestudio=data;
+  }),
+  this.service.getInmuebles()
+  .subscribe(data=>{
+  this.inmuebles=data;
+  })
+    }     
       
-        Editar(pagoestudio:PagoEstudio): void{
-          alert("Edite al usuario");
-          localStorage.setItem("id",pagoestudio.id.toString());
-          this.router.navigate(['edit']);
-        }
-        Delete(pagoestudio:PagoEstudio){
-          this.service.deletePersona(pagoestudio)
-          .subscribe(data=>{
-            this.pagoestudio=this.pagoestudio.filter(p=>p!==pagoestudio); 
-            alert("Usuario eliminado...")
-          })
-        }
+  Editar(pagoestudio:PagoEstudio): void{
+    alert("Edite al usuario");
+    localStorage.setItem("id",pagoestudio.id.toString());
+    this.router.navigate(['edit-pagoestudio']);
+    }
+   Delete(pagoestudio:PagoEstudio){
+    this.service.deletePagoEstudio(pagoestudio)
+    .subscribe(data=>{
+    this.pagoestudio=this.pagoestudio.filter(p=>p!==pagoestudio); 
+    alert("Usuario eliminado...")
+    })
+    }
       
   
 }

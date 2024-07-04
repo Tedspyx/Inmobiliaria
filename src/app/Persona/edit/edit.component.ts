@@ -20,6 +20,7 @@ export class EditComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.Editar();
     this.loadPersona();
     this.loadTipoPersona();
     this.LoadSucursales();
@@ -50,6 +51,14 @@ loadPersona(): void {
   } else {
     console.error('ID no proporcionado en la ruta');
   }
+}
+
+Editar(){
+  let id=Number(localStorage.getItem("id"));
+  this.service.getPersonaId(+id)
+  .subscribe(data=>{
+      this.persona=data;
+    })
 }
   Actualizar(persona: Persona) {
     this.service.updatePersona(persona)

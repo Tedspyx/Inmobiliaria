@@ -1,37 +1,89 @@
+<div class="contenido">
+  <header class="header">
+    <nav class="nav-bar nav">
+      <button class="nav-link" (click)="Inicio()">InAlpes</button>
+      <div class="nav-links menu">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <button class="nav-link" (click)="Inmuebles()">Inmuebles</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="Nuevo()">Crear Cuenta</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" (click)="InicioSesion()">Ingresar</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 <div class="container">
-    <h1>Inmuebles</h1>
-    
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>PROPIETARIO</th>
-          <th>TIPO DE INMUEBLE</th>
-          <th>DIRECCION</th>
-          <th>BARRIO</th>
-          <th>CIUDAD</th>
-          <th>DESCRIPCION DEL SITIO</th>
-          <th>DESCRIPCION DE ALREDEDORES</th>
-          <th>ACCIONES</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let inmueble of inmueble" class="text-center">
-          <td>{{ inmueble.idInmu }}</td>
-          <td>{{ inmueble.idTp}}</td>
-          <td>{{ inmueble.idTipoInmu}}</td>
-          <td>{{ inmueble.direccion }}</td>
-          <td>{{ inmueble.barrio }}</td>
-          <td>{{ inmueble.ciudad }}</td>
-          <td>{{ inmueble.descripcionSitio }}</td>
-          <td>{{ inmueble.descripcionAlrededores }}</td>
-          <td>
-            <button (click)="Editar(inmueble)" class="btn btn-warning">Editar</button>
-            <button (click)="Delete(inmueble)" class="btn btn-danger">Borrar</button>
-            <a [routerLink]="['/inmueble-detalle', inmueble.idInmu]" class="btn btn-primary">Ver Detalles</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <h1>Inmuebles</h1>
+
+  <div *ngFor="let inmueble of inmueble; let i = index">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">{{ inmueble.idInmu }} - {{ inmueble.idTipoInmu  }}</h5>
+      </div>
+      <div class="card-body">
+        <div class="imagen">
+        <img [src]="getRandomImagePath()" alt="Imagen del Inmueble" class="img-fluid mb-3">
+      </div>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th>PROPIETARIO</th>
+              <td>{{ inmueble.idTp }}</td>
+            </tr>
+            <tr>
+              <th>DIRECCION</th>
+              <td>{{ inmueble.direccion }}</td>
+            </tr>
+            <tr>
+              <th>BARRIO</th>
+              <td>{{ inmueble.barrio }}</td>
+            </tr>
+            <tr>
+              <th>CIUDAD</th>
+              <td>{{ inmueble.ciudad }}</td>
+            </tr>
+            <tr>
+              <th>DESCRIPCION DEL SITIO</th>
+              <td>{{ inmueble.descripcionSitio }}</td>
+            </tr>
+            <tr>
+              <th>DESCRIPCION DE ALREDEDORES</th>
+              <td>{{ inmueble.descripcionAlrededores }}</td>
+            </tr>
+            <tr>
+              <th>VALOR DEL INMUEBLE</th>
+              <td>{{ inmueble.valor }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card-footer">
+          <button (click)="Editar(inmueble)" class="btn btn-warning">Editar</button>
+          <button (click)="Delete(inmueble)" class="btn btn-danger">Borrar</button>
+          <button (click)="Visita()" class="btn btn-dark">Visita</button>
+          <button (click)="Comprar()" class="btn btn-secondary">Comprar</button>
+          <a [routerLink]="['/inmueble-detalle', inmueble.idInmu]" class="btn btn-primary">Ver Detalles</a>
+        </div>
+      </div>
+    </div>
   </div>
-  
+</div>
+<footer class="footer">
+  <h2>InAlpes</h2>
+    <ul class="footer-links">
+      <li class="footer-item">
+        <a class="footer-link" href="#">Ubicación</a>
+      </li>
+      <li class="footer-item">
+        <a class="footer-link" href="#">Telefono: 601 74568322</a>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" (click)="Sucursales()"style ="color:white">Sucursales</button>
+      </li>
+    </ul>   
+</footer>
+</div>

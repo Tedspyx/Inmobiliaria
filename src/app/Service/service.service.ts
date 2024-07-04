@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Persona } from '../Modelo/Persona';
 import { TipoPersona } from '../Modelo/TipoPersona';
 import { Sucursales } from '../Modelo/Sucursales';
+import { Inmuebles } from '../Modelo/Inmuebles';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 @Injectable({
@@ -16,7 +17,8 @@ export class ServiceService {
   Url = 'http://localhost:8080/personas/submit';
   Urltipo = 'http://localhost:8080/tipopersonas/submit'
   Urlsucursales = 'http://localhost:8080/sucursales/submit';
-  Urlcorreo = 'http://localhost:8080/personas/verify';
+  Urlcorreo = 'http://localhost:8080/personas/verify';  
+
 
   getPersonas(){
     return this.http.get<Persona[]>(this.Url);
@@ -52,6 +54,8 @@ export class ServiceService {
       catchError(this.handleError)
     );
   }
+
+
 
   private handleError(error: HttpErrorResponse) {
     let errorMessage = 'Correo no encontrado, por favor verifique e intente nuevamente.';

@@ -44,6 +44,11 @@ export class AddComponent implements OnInit{
   InicioSesion(){
     this.router.navigate(["inicio-sesion"]);
   }
+  Inmuebles(){
+    this.router.navigate(["listar-inmuebles"]);
+  }
+
+
   Guardar(persona:Persona) {
     alert("Tipo persona:"+ persona.idTp);
     this.service.createPersona(persona)

@@ -1,9 +1,9 @@
-import { Inmuebles } from "./Inmuebles";
+
 
 export class PagoEstudio{
     
     id: number = 0;
-    idInmueble: Inmuebles = new Inmuebles();
+    idInmueble: number = 0;
     codigoTransac: String = '';
     fechaPago: String = '';
     montoPago: String = '';    

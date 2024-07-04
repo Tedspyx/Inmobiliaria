@@ -1,1 +1,49 @@
-<p>edit-pagoestudio works!</p>
+<div class="contenido">
+    <header class="header">    
+        <nav class="nav-bar nav">
+          <button class="nav-link" (click)="Inicio()">InAlpes</button>
+          <div class="nav-links menu">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <button class="nav-link" (click)="Inmuebles()">Inmuebles</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" (click)="CerrarSesion()">Cerrar Sesion</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    
+
+        <main class="main-content">
+        <h3>Hacer Pago para el estudio del inmueble :</h3>
+            <form action="">                    
+                    <input type="text" class="form-contro" [(ngModel)]="pagoestudio.montoPago" name="montoPago" placeholder="Monto a pagar:">
+                    <input type="text" class="form-contro" [(ngModel)]="pagoestudio.fechaPago" name="fechaPago" placeholder="Fecha del pago:">
+                    <select class="form-contro" [(ngModel)]="pagoestudio.idInmueble" name="idInmueble">
+                        <option value="" disabled selected>Seleccione un inmueble </option>
+                        <option *ngFor="let inmueble of inmueble" [value]="inmueble.idInmu">{{inmueble.idInmu}}</option>
+                    </select>
+                <div class="boton ">
+                <button (click)="Actualizar(pagoestudio)" class="btn btn-danger">Guardar</button>
+                <button (click)="Cancelar()" class="btn btn-danger">Cancelar</button>
+                </div>
+            </form>
+        </main>
+        <footer class="footer">
+            <h2>InAlpes</h2>
+            <ul class="footer-links">
+              <li class="footer-item">
+                <a class="footer-link" href="#">Ubicación</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-link" href="#">Telefono: 601 74568322</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-link" href="#">Sucursales</a>
+              </li>
+            </ul>      
+          </footer>
+        </div>
+

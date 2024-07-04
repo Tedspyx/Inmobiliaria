@@ -1,14 +1,11 @@
 <div class="contenido">
-    <header>
-        <nav class="nav-bar">
-          <button class="logo" (click)="Inicio()">InAlpes</button>
-          <div class="nav-links">
+    <header class="header">
+        <nav class="nav-bar nav">
+          <button class="nav-link" (click)="Inicio()">InAlpes</button>
+          <div class="nav-links menu">
             <ul class="nav-menu">
               <li class="nav-item">
-                <a class="nav-link" href="#">En venta</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">En Alquiler</a>
+                <button class="nav-link" (click)="Inmuebles()">Inmuebles</button>
               </li>
               <li class="nav-item">
                 <button class="nav-link" (click)="Nuevo()">Crear Cuenta</button>

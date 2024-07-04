@@ -4,6 +4,7 @@ import { InmueblesserviceService } from '../../Service/Inmuebles-Service/inmuebl
 import { Inmuebles } from '../../Modelo/Inmuebles';
 import { Persona } from '../../Modelo/Persona';
 import { TipoInmueble } from '../../Modelo/TipoInmueble';
+import { AuthService} from '../../Service/auth.service';
 
 @Component({
   selector: 'app-listar',
@@ -14,7 +15,18 @@ export class ListarInmueblesComponent implements OnInit{
   tipoInmueble:TipoInmueble[]=[];
   inmueble:Inmuebles[] = [];
   idPersona:Persona[] = [];
-  constructor(private service:InmueblesserviceService, private router:Router){
+  imagePaths: string[] = [
+    'assets/1.jpg',
+    'assets/2.jpg',
+    'assets/3.jpg',
+    'assets/4.jpg',
+    'assets/aptoproyecto.jpg',
+    'assets/aptos.jpg',
+    'assets/aptoventa.jpg',
+    'assets/venta.jpg',
+    // Agrega tantas rutas como imágenes tengas
+  ];
+  constructor(private service:InmueblesserviceService, private router:Router, private authService: AuthService){
   }
 
   ngOnInit(): void {
@@ -31,6 +43,47 @@ export class ListarInmueblesComponent implements OnInit{
   this.tipoInmueble=data;
 })
     })
+}
+
+getRandomImagePath(): string {
+  const randomIndex = Math.floor(Math.random() * this.imagePaths.length);
+  return this.imagePaths[randomIndex];
+}
+InicioSesion(){
+  this.router.navigate(["inicio-sesion"]);
+}
+Visita(){
+  this.router.navigate(["add-visita"]);
+}
+Comprar(){
+  this.router.navigate(["add-compra"]);
+}
+Nuevo(){
+  this.router.navigate(["add"]);
+}
+Sucursales(){
+  this.router.navigate(["listar-sucursales"]);
+}
+Inicio(){
+  this.router.navigate(["inicio"]);
+}
+AddInmueble(){
+  this.router.navigate(["add-inmuebles"]);
+}
+Inmuebles(){
+  this.router.navigate(["listar-inmuebles"]);
+}
+MiPerfil() {
+  const userId = this.authService.getUsuarioId();
+  if (userId !== null) {
+    this.router.navigate([`perfil/${userId}`]);
+  } else {
+    console.error('No se pudo obtener el ID del usuario');
+  }
+}
+CerrarSesion() {
+  // Aquí puedes agregar la lógica para limpiar cualquier estado de sesión, si es necesario
+  this.router.navigate(["inicio"]);
 }
 
 

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Compras</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID COMPRA</th>
+                        <th>ID INMUEBLE</th>
+                        <th>FECHA COMPRA</th>
+                        <th>MONTO COMPRA</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let compra of compra" class="text-center">
+                        <td>{{compra.idCompras}}</td>
+                        <td>{{compra.idInmueble}}</td>
+                        <td>{{compra.fechaCompra}}</td>
+                        <td>{{compra.montoCompra}}</td>
+                        <td>
+                            <button (click)="Editar(compra)" class="btn btn-warning">Editar</button>
+                            <button (click)="Delete(compra)" class="btn btn-danger" style="margin-left: 1px;">Borrar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

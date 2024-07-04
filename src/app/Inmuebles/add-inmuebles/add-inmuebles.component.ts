@@ -21,7 +21,7 @@ export class AddInmueblesComponent implements OnInit{
     'assets/3.jpg',
     // Agrega más nombres de archivos según sea necesario
   ];
-  constructor(private router:Router, private service:InmueblesserviceService){}
+  constructor(private authService: AuthService, private router:Router, private service:InmueblesserviceService){}
 
   ngOnInit(){
     this.LoadTipoInmueble();
@@ -53,6 +53,31 @@ export class AddInmueblesComponent implements OnInit{
     console.log('Imagen seleccionada aleatoriamente:', selectedImage); // Verificar imagen seleccionada
     return selectedImage;
   }
+
+
+//rutas 
+Inicio(){
+  this.router.navigate(["inicio"]);
+}
+Cancelar(){
+  this.router.navigate(["sesion-iniciada"]);
+}
+CerrarSesion(){
+  this.router.navigate(["inicio"]);
+}
+Inmuebles(){
+  this.router.navigate(["listar-inmuebles-sesion"]);
+}
+MiPerfil() {
+  const userId = this.authService.getUsuarioId();
+  if (userId !== null) {
+    this.router.navigate([`perfil/${userId}`]);
+  } else {
+    console.error('No se pudo obtener el ID del usuario');
+  }
+}
+
+
 
 Guardar(inmuebles: Inmuebles) {
   if (!this.selectedImage) {

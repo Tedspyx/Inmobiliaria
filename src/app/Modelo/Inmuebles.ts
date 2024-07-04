@@ -6,6 +6,7 @@ export class Inmuebles{
     direccion: String = '';
     barrio: String = '';
     ciudad: String = '';    
+    valor: String = '';
     descripcionAlrededores: String = '';
     descripcionSitio: String = '';
     idInmu: number = 0;

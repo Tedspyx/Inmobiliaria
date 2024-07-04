@@ -30,7 +30,7 @@ export class SesionIniciadaComponent {
     // Aquí puedes agregar la lógica para limpiar cualquier estado de sesión, si es necesario
     this.router.navigate(["inicio"]);
   }
-  Venta(){
+  Inmuebles(){
     this.router.navigate(["listar-inmuebles"]);
   }
 }

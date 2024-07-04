@@ -26,11 +26,11 @@ export class PagoestudioserviceService {
   }
 
 
-  updatePersona(pagoestudio:PagoEstudio){
+  updatePagoEstudio(pagoestudio:PagoEstudio){
     return this.http.put<PagoEstudio>(this.Url+"/"+pagoestudio.id,pagoestudio);
   }
 
-  deletePersona(pagoestudio:PagoEstudio){
+  deletePagoEstudio(pagoestudio:PagoEstudio){
     return this.http.delete<PagoEstudio>(this.Url+"/"+pagoestudio.id);
   }
 
